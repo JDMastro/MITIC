@@ -1,0 +1,28 @@
+
+1)
+select ID_Proyecto, Constructora, Numero_Habitaciones 
+     from Proyecto where Clasificacion = "Apartaestudio" AND Numero_Habitaciones > 2
+
+
+
+2)REVISAR
+SELECT ID_Lider, Nombre, Salario, Ciudad_Residencia from Lider
+     where Ciudad_Residencia = "Barranquilla" AND Salario > (select min(Salario) from Lider) ORDER by Salario
+
+
+
+3)
+SELECT p.id_Proyecto, mc.Nombre_Material, mc.Importado from Compra c
+    INNER JOIN Proyecto p ON c.ID_Proyecto = p.ID_Proyecto
+	INNER JOIN MaterialConstruccion mc ON mc.ID_MaterialConstruccion = c.ID_MaterialConstruccion
+	WHERE c.ID_Proyecto = 1 OR c.ID_Proyecto = 184 OR c.ID_Proyecto = 400 ORDER by c.ID_Proyecto
+
+
+4)
+select ID_Proyecto, Proveedor FROM Compra where ID_Proyecto > 119 AND ID_Proyecto < 125
+
+
+
+5)REVISAR
+SELECT Clasificacion, avg(Salario) as Promedio from Lider Where Salario < 500000 
+GROUP by Clasificacion ORDER by Promedio DESC

@@ -19,7 +19,7 @@ SELECT p.id_Proyecto, mc.Nombre_Material, mc.Importado from Compra c
 
 
 4)
-select ID_Proyecto, Proveedor FROM Compra where ID_Proyecto > 119 AND ID_Proyecto < 125
+select ID_Proyecto, Proveedor FROM Compra where ID_Proyecto > 119 AND ID_Proyecto < 125 order by ID_Proyecto 
 
 
 

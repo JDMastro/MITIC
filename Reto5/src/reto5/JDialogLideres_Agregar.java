@@ -323,6 +323,13 @@ public class JDialogLideres_Agregar extends javax.swing.JDialog {
             try {
                 controlador.insertarLider(l);
                 JOptionPane.showMessageDialog(this, "Se ha insertado correctamente ");
+                txtNombre.setText("");
+                txtPApellido.setText("");
+                txtSApellido.setText("");
+                txtSalario.setText("");
+                txtCiudad.setText("");
+                txtNumDocumento.setText("");
+                txtFechaNa.setText("2000-06-17");
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(this, " " + e.getMessage());
                 System.out.println(e.getMessage());
